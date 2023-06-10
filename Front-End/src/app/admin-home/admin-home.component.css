@@ -1,0 +1,157 @@
+.container {
+  width: 80%;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.table-container {
+  width: 45%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tickets-list,
+.technicians-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tickets-list th, .tickets-list td,
+.technicians-list th, .technicians-list td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  transition: background-color 0.2s;
+}
+
+.tickets-list tr:hover,
+.technicians-list tr:hover {
+  background-color: #f9f9f9;
+}
+
+.assign-section {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.assign-form {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.assign-form div {
+  margin-bottom: 10px;
+}
+
+.assign-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.tickets-list td:nth-child(4) {
+  white-space: nowrap;
+  padding: 10px;
+}
+
+.technicians-list td:nth-child(3) {
+  white-space: nowrap;
+  padding: 10px;
+}
+
+
+.assign-form button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.assign-form button:hover {
+  background-color: #4CAF50;
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #333;
+  color: white;
+  flex-direction: row-reverse;
+}
+
+.header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+#logout-button {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+#logout-button:hover {
+  background-color: #e60000;
+}
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20%;
+  margin-left: 10px;
+  font-size: 12px;
+  color: white;
+}
+
+.large {
+  width: 100px;
+}
+
+.badge-green {
+  background-color: #4CAF50;
+}
+
+.badge-red {
+  background-color: #f44336;
+}
+
+.badge-blue {
+  background-color: #0000FF;
+}
+

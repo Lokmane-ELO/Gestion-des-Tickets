@@ -1,0 +1,118 @@
+.container {
+  width: 80%;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #333;
+  color: white;
+}
+
+.header h1 {
+  flex-grow: 1;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+#logout-button {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 100px; /* fixe la largeur du bouton */
+  max-width: 15%; /* fixe la largeur maximale du bouton */
+}
+
+#logout-button:hover {
+  background-color: #f23535;
+}
+
+
+form {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  flex-basis: 50%;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.input-group input {
+  flex-basis: 50%;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}

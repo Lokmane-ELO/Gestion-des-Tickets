@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="header">
+    <button id="logout-button" (click)="navigateTo('')">Déconnexion</button>
+    <h1>Page d'administration</h1>
+  </div>
+  <div class="content">
+    <div class="table-container">
+      <h2>Tickets</h2>
+      <table class="tickets-list">
+        <tr>
+          <th>Num Ticket</th>
+          <th>Description</th>
+          <th>Priorite</th>
+          <th>Etat Ticket</th>
+
+          <th>Date Creation</th>
+          <th>Durée Intervention</th>
+
+        </tr>
+        <tr *ngFor="let ticket of tickets">
+          <td>{{ticket.numTicket}}</td>
+          <td>{{ticket.description}}</td>
+          <td>
+            <span *ngIf="ticket.priorite == 'elever'; else nonElever" >{{ticket.priorite}}</span>
+            <ng-template #nonElever><span >{{ticket.priorite}}</span></ng-template>
+          </td>
+          <td>
+            <span *ngIf="ticket.etatTicket == 'Cloturé'; else nonCloturer" class="badge badge-blue">{{ticket.etatTicket}}</span>
+            <ng-template #nonCloturer><span *ngIf="ticket.etatTicket == 'Affecter'; else nonAffecter" class="badge badge-green">{{ticket.etatTicket}}</span></ng-template>
+            <ng-template #nonAffecter><span class="badge badge-red">{{ticket.etatTicket}}</span></ng-template>
+
+          </td>
+          <td>{{ticket.dateCreation}}</td>
+          <td>{{ticket.interventionDuration}}</td>
+
+        </tr>
+      </table>
+    </div>
+
+    <div class="table-container">
+      <h2>Techniciens</h2>
+      <table class="technicians-list">
+        <tr>
+          <th>Code User</th>
+          <th>Nom</th>
+          <th>Prenom</th>
+          <th>Competences</th>
+          <th>Tickets En Cours</th>
+          <th>Tickets Cloturés</th>
+        </tr>
+        <tr *ngFor="let technicien of techniciens">
+          <td>{{technicien.codeUser}}</td>
+          <td class="large">{{technicien.nom}}</td>
+          <td>{{technicien.prenom}}</td>
+          <td>{{technicien.competences}}</td>
+          <td>
+
+            <span class="badge badge-red">{{technicien.openTicketCount}}</span>
+          </td>
+          <td>
+            <span class="badge badge-green">{{technicien.closedTicketCount}}</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="assign-section">
+    <h2>Assign Ticket</h2>
+    <form (ngSubmit)="assignTicket()" class="assign-form">
+      <div>
+        <label for="ticket">Ticket ID</label>
+        <input type="number" id="ticket" [(ngModel)]="ticketToAssign" name="ticketToAssign">
+      </div>
+      <div>
+        <label for="technicien">Technicien ID</label>
+        <input type="number" id="technicien" [(ngModel)]="technicienToAssign" name="technicienToAssign">
+      </div>
+      <button type="submit">Affecter Ticket</button>
+    </form>
+  </div>
+</div>
